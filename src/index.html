@@ -66,15 +66,81 @@
     font-size: 0.95rem;
   }
   #weather {
-    font-size: 0.9rem;
-    color: #444;
-    margin-bottom: 0.75rem;
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+    background: #f4f7fa;
+    border-radius: 0.5rem;
+  }
+  #weather.loaded {
+    display: flex;
+  }
+  #weather .icon {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+  #weather .temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  #weather .details {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  #weather .aqi {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    white-space: nowrap;
+  }
+  #forecast {
+    display: none;
+    gap: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+  }
+  #forecast.loaded {
+    display: flex;
+  }
+  #forecast .day {
+    flex: 0 0 auto;
+    width: 4.2rem;
+    text-align: center;
+    padding: 0.4rem 0.2rem;
+    background: #f4f7fa;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+  }
+  #forecast .day .label {
+    font-weight: bold;
+    color: #333;
+  }
+  #forecast .day .icon {
+    font-size: 1.4rem;
+    margin: 0.1rem 0;
+  }
+  #forecast .day .hi {
+    font-weight: bold;
+  }
+  #forecast .day .lo {
+    color: #777;
   }
 </style>
 </head>
 <body>
   <h1>Hedgie</h1>
-  <div id="weather"></div>
+  <div id="weather">
+    <span class="icon"></span>
+    <div>
+      <span class="temp"></span> <span class="condition"></span> <span class="aqi"></span>
+      <div class="details"></div>
+    </div>
+  </div>
+  <div id="forecast"></div>
   <div id="meta">Loading&hellip;</div>
   <div class="controls">
     <select id="category-filter">
@@ -171,6 +237,16 @@ function isEventInWindow(dateText, windowStart, windowEnd) {
   return info.start <= windowEnd && info.end >= windowStart;
 }
 
+// US EPA AQI category colors (https://www.airnow.gov/aqi/aqi-basics/).
+const AQI_COLORS = {
+  'Good': { bg: '#d4edda', fg: '#1e7e34' },
+  'Moderate': { bg: '#fff3cd', fg: '#856404' },
+  'Unhealthy for sensitive groups': { bg: '#ffe0b2', fg: '#a15c00' },
+  'Unhealthy': { bg: '#f8d7da', fg: '#a71d2a' },
+  'Very unhealthy': { bg: '#e2c6f0', fg: '#6a1b9a' },
+  'Hazardous': { bg: '#d6a3a3', fg: '#5a0000' },
+};
+
 async function loadWeather() {
   const weatherEl = document.getElementById('weather');
   try {
@@ -178,10 +254,41 @@ async function loadWeather() {
     const data = await res.json();
     const today = data.items[0];
     if (!today) return;
-    weatherEl.textContent =
-      `${Math.round(today.temp_f)}°F, ${today.condition} ` +
-      `(high ${Math.round(today.high_f)}° / low ${Math.round(today.low_f)}°, ` +
-      `${today.precipitation_probability_max}% chance of rain)`;
+
+    weatherEl.querySelector('.icon').textContent = today.icon || '🌡️';
+    weatherEl.querySelector('.temp').textContent = `${Math.round(today.temp_f)}°F`;
+    weatherEl.querySelector('.condition').textContent = today.condition;
+
+    const aqiEl = weatherEl.querySelector('.aqi');
+    if (today.aqi != null) {
+      const colors = AQI_COLORS[today.aqi_category] || { bg: '#eee', fg: '#333' };
+      aqiEl.textContent = `AQI ${today.aqi} · ${today.aqi_category}`;
+      aqiEl.style.background = colors.bg;
+      aqiEl.style.color = colors.fg;
+    }
+
+    weatherEl.querySelector('.details').textContent =
+      `High ${Math.round(today.high_f)}° · Low ${Math.round(today.low_f)}° · ` +
+      `${today.precipitation_probability_max}% chance of rain`;
+    weatherEl.classList.add('loaded');
+
+    const forecastEl = document.getElementById('forecast');
+    forecastEl.innerHTML = '';
+    data.items.forEach((day, i) => {
+      const [y, m, d] = day.date.split('-').map(Number);
+      const label = i === 0 ? 'Today' : new Date(y, m - 1, d).toLocaleDateString(undefined, { weekday: 'short' });
+
+      const card = document.createElement('div');
+      card.className = 'day';
+      card.innerHTML = `
+        <div class="label">${label}</div>
+        <div class="icon">${day.icon || '🌡️'}</div>
+        <div class="hi">${Math.round(day.high_f)}°</div>
+        <div class="lo">${Math.round(day.low_f)}°</div>
+      `;
+      forecastEl.appendChild(card);
+    });
+    forecastEl.classList.add('loaded');
   } catch {
     // Weather is a nice-to-have — don't block the events list on it.
   }

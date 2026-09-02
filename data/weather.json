@@ -1,15 +1,84 @@
 {
-  "generated_at": "2026-09-02T16:04:55.608Z",
+  "generated_at": "2026-09-02T16:22:03.949Z",
   "source": "Open-Meteo forecast for Seattle, WA (47.6062, -122.3321)",
   "status": "ok",
   "items": [
     {
       "date": "2026-09-02",
-      "temp_f": 62.1,
-      "condition": "Overcast",
+      "temp_f": 61.9,
+      "condition": "Dense drizzle",
+      "icon": "🌦️",
       "high_f": 66.9,
       "low_f": 54,
-      "precipitation_probability_max": 90
+      "precipitation_probability_max": 90,
+      "aqi": 23,
+      "aqi_category": "Good"
+    },
+    {
+      "date": "2026-09-03",
+      "temp_f": null,
+      "condition": "Light drizzle",
+      "icon": "🌦️",
+      "high_f": 64.1,
+      "low_f": 52.6,
+      "precipitation_probability_max": 34,
+      "aqi": null,
+      "aqi_category": null
+    },
+    {
+      "date": "2026-09-04",
+      "temp_f": null,
+      "condition": "Overcast",
+      "icon": "☁️",
+      "high_f": 69.5,
+      "low_f": 49.7,
+      "precipitation_probability_max": 6,
+      "aqi": null,
+      "aqi_category": null
+    },
+    {
+      "date": "2026-09-05",
+      "temp_f": null,
+      "condition": "Overcast",
+      "icon": "☁️",
+      "high_f": 70.3,
+      "low_f": 52.1,
+      "precipitation_probability_max": 10,
+      "aqi": null,
+      "aqi_category": null
+    },
+    {
+      "date": "2026-09-06",
+      "temp_f": null,
+      "condition": "Overcast",
+      "icon": "☁️",
+      "high_f": 71.7,
+      "low_f": 53,
+      "precipitation_probability_max": 3,
+      "aqi": null,
+      "aqi_category": null
+    },
+    {
+      "date": "2026-09-07",
+      "temp_f": null,
+      "condition": "Overcast",
+      "icon": "☁️",
+      "high_f": 79.5,
+      "low_f": 52.1,
+      "precipitation_probability_max": 9,
+      "aqi": null,
+      "aqi_category": null
+    },
+    {
+      "date": "2026-09-08",
+      "temp_f": null,
+      "condition": "Overcast",
+      "icon": "☁️",
+      "high_f": 74.4,
+      "low_f": 55,
+      "precipitation_probability_max": 2,
+      "aqi": null,
+      "aqi_category": null
     }
   ]
 }
