@@ -1,0 +1,16 @@
+{
+  "name": "seattle-things-to-do",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "scrape": "node scripts/scrape.js",
+    "describe": "node scripts/generate-descriptions.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
