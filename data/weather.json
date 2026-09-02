@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-09-02T16:02:12.549Z",
+  "source": "Open-Meteo forecast for Seattle, WA (47.6062, -122.3321)",
+  "status": "ok",
+  "items": [
+    {
+      "date": "2026-09-02",
+      "temp_f": 62.1,
+      "condition": "Overcast",
+      "high_f": 66.9,
+      "low_f": 54,
+      "precipitation_probability_max": 90
+    }
+  ]
+}

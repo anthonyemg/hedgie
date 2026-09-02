@@ -7,7 +7,7 @@ on:
   # pushes don't trigger `on: push` workflows (loop prevention) — so chain
   # off that workflow's completion instead to keep the deployed data fresh.
   workflow_run:
-    workflows: ["Refresh events data"]
+    workflows: ["Refresh events data", "Refresh weather data"]
     types: [completed]
   workflow_dispatch:
 

@@ -65,10 +65,16 @@
   .controls label {
     font-size: 0.95rem;
   }
+  #weather {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+  }
 </style>
 </head>
 <body>
   <h1>Hedgie</h1>
+  <div id="weather"></div>
   <div id="meta">Loading&hellip;</div>
   <div class="controls">
     <select id="category-filter">
@@ -165,6 +171,22 @@ function isEventInWindow(dateText, windowStart, windowEnd) {
   return info.start <= windowEnd && info.end >= windowStart;
 }
 
+async function loadWeather() {
+  const weatherEl = document.getElementById('weather');
+  try {
+    const res = await fetch('data/weather.json');
+    const data = await res.json();
+    const today = data.items[0];
+    if (!today) return;
+    weatherEl.textContent =
+      `${Math.round(today.temp_f)}°F, ${today.condition} ` +
+      `(high ${Math.round(today.high_f)}° / low ${Math.round(today.low_f)}°, ` +
+      `${today.precipitation_probability_max}% chance of rain)`;
+  } catch {
+    // Weather is a nice-to-have — don't block the events list on it.
+  }
+}
+
 async function main() {
   const res = await fetch('data/events.json');
   const data = await res.json();
@@ -243,6 +265,7 @@ async function main() {
   dateFilter.addEventListener('change', applyFilters);
 }
 
+loadWeather();
 main().catch(err => {
   document.getElementById('meta').textContent = 'Failed to load events: ' + err.message;
 });
