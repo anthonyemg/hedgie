@@ -1,31 +1,9 @@
 {
-  "source_url": "https://www.events12.com/seattle/",
-  "scraped_at": "2026-09-02T04:56:53.564Z",
-  "events": [
+  "generated_at": "2026-09-02T06:25:27.105Z",
+  "source": "Facts scraped from https://www.events12.com/seattle/; descriptions not yet Gemini-generated",
+  "status": "ok",
+  "items": [
     {
-      "id": "100089",
-      "name": "Evergreen State Fair",
-      "is_free": false,
-      "date_text": "September 1 - 7, 2026",
-      "neighborhood": "Monroe",
-      "distance_from_downtown": "33 miles NE",
-      "address": "Evergreen State Fairgrounds, 14405 179th Ave SE, Monroe, WA 98272",
-      "source_url": "https://www.evergreenfair.org/248/The-Evergreen-State-Fair",
-      "category": "other"
-    },
-    {
-      "id": "109594",
-      "name": "Dance in the park",
-      "is_free": true,
-      "date_text": "September 1 - 8, 2026",
-      "neighborhood": "Seattle parks",
-      "distance_from_downtown": null,
-      "address": null,
-      "source_url": "https://www.danceforjoy.biz/dancingtildusk/",
-      "category": "dance"
-    },
-    {
-      "id": "115468",
       "name": "Family circus",
       "is_free": false,
       "date_text": "September 2 - 7, 2026",
@@ -36,7 +14,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "117523",
       "name": "Harry Potter live",
       "is_free": false,
       "date_text": "September 2 - 12, 2026",
@@ -47,7 +24,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "112868",
       "name": "Winery concerts",
       "is_free": false,
       "date_text": "September 2 - 27, 2026",
@@ -58,7 +34,6 @@
       "category": "music"
     },
     {
-      "id": "118543",
       "name": "Sunflower farms",
       "is_free": false,
       "date_text": "September 2 - 28, 2026",
@@ -69,7 +44,6 @@
       "category": "other"
     },
     {
-      "id": "119957",
       "name": "Live theater",
       "is_free": false,
       "date_text": "September 2 - Oct. 3, 2026",
@@ -80,7 +54,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "120161",
       "name": "Sailboat",
       "is_free": false,
       "date_text": "September 2 - Oct. 31, 2026",
@@ -91,18 +64,6 @@
       "category": "other"
     },
     {
-      "id": "119020",
-      "name": "Taste of Seattle",
-      "is_free": false,
-      "date_text": "September 2 - Dec. 26, 2026",
-      "neighborhood": "Seattle",
-      "distance_from_downtown": null,
-      "address": null,
-      "source_url": "https://www.viator.com/tours/Seattle/Chef-Guided-Food-Tour-of-Pike-Place-Market/d704-23161P1?pid=P00051759&mcid=42383&medium=link&campaign=119020f",
-      "category": "food, beverage"
-    },
-    {
-      "id": "120202",
       "name": "Concerts",
       "is_free": true,
       "date_text": "September 2 - Dec. 27, 2026",
@@ -113,7 +74,6 @@
       "category": "music"
     },
     {
-      "id": "120200",
       "name": "Fun tours",
       "is_free": false,
       "date_text": "September 2 - Dec. 31, 2026",
@@ -124,7 +84,6 @@
       "category": "other"
     },
     {
-      "id": "119028",
       "name": "Free things to do",
       "is_free": true,
       "date_text": "September 2, 2026 - Dec. 31, 2027",
@@ -135,7 +94,6 @@
       "category": "other"
     },
     {
-      "id": "100751",
       "name": "Museum day",
       "is_free": true,
       "date_text": "September 3, 2026",
@@ -146,7 +104,16 @@
       "category": "other"
     },
     {
-      "id": "100031",
+      "name": "Evergreen State Fair",
+      "is_free": false,
+      "date_text": "September 3 - 7, 2026",
+      "neighborhood": "Monroe",
+      "distance_from_downtown": "33 miles NE",
+      "address": "Evergreen State Fairgrounds, 14405 179th Ave SE, Monroe, WA 98272",
+      "source_url": "https://www.evergreenfair.org/248/The-Evergreen-State-Fair",
+      "category": "other"
+    },
+    {
       "name": "Ellensburg Rodeo",
       "is_free": false,
       "date_text": "September 3 - 7, 2026",
@@ -157,7 +124,16 @@
       "category": "spectator sport"
     },
     {
-      "id": "118595",
+      "name": "Dance in the park",
+      "is_free": true,
+      "date_text": "September 3 - 8, 2026",
+      "neighborhood": "Seattle parks",
+      "distance_from_downtown": null,
+      "address": null,
+      "source_url": "https://www.danceforjoy.biz/dancingtildusk/",
+      "category": "dance"
+    },
+    {
       "name": "Art walks",
       "is_free": true,
       "date_text": "September 3 - 18, 2026",
@@ -168,7 +144,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "118511",
       "name": "Baseball",
       "is_free": false,
       "date_text": "September 3 - 27, 2026",
@@ -179,7 +154,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "119814",
       "name": "Indoor music festival",
       "is_free": false,
       "date_text": "September 4 - 6, 2026 (8 p.m.)",
@@ -190,7 +164,6 @@
       "category": "music"
     },
     {
-      "id": "119412",
       "name": "Olympia waterfront festival",
       "is_free": true,
       "date_text": "September 4 - 6, 2026",
@@ -201,7 +174,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "105157",
       "name": "Whidbey Island music festival",
       "is_free": true,
       "date_text": "September 4 - 6, 2026",
@@ -212,7 +184,6 @@
       "category": "music"
     },
     {
-      "id": "100179",
       "name": "Video game convention",
       "is_free": false,
       "date_text": "September 4 - 7, 2026",
@@ -223,7 +194,6 @@
       "category": "conference, expo"
     },
     {
-      "id": "119075",
       "name": "Gourmet cooking class",
       "is_free": false,
       "date_text": "September 4 - 26, 2026",
@@ -234,7 +204,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "100258",
       "name": "Puyallup fair",
       "is_free": false,
       "date_text": "September 4 - 27, 2026",
@@ -245,7 +214,6 @@
       "category": "other"
     },
     {
-      "id": "117301",
       "name": "Concerts at the fair",
       "is_free": false,
       "date_text": "September 4 - 27, 2026",
@@ -256,7 +224,6 @@
       "category": "music"
     },
     {
-      "id": "119803",
       "name": "Party on a ferry boat",
       "is_free": false,
       "date_text": "September 4 - Oct. 10, 2026",
@@ -267,7 +234,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "120310",
       "name": "Bourbon tasting",
       "is_free": false,
       "date_text": "September 5, 2026 (7 to 9 p.m.)",
@@ -278,7 +244,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "120420",
       "name": "Star Trek day",
       "is_free": false,
       "date_text": "September 5, 2026 (8:30 a.m. to 4 p.m.)",
@@ -289,7 +254,6 @@
       "category": "conference, expo"
     },
     {
-      "id": "120402",
       "name": "Fantasy scavenger hunt",
       "is_free": false,
       "date_text": "September 5, 2026 (10 a.m. to 4:30 p.m.)",
@@ -300,7 +264,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "112878",
       "name": "Children’s Business Fair",
       "is_free": true,
       "date_text": "September 5, 2026 (12 to 3 p.m.)",
@@ -311,7 +274,6 @@
       "category": "other"
     },
     {
-      "id": "100245",
       "name": "Bumbershoot music festival",
       "is_free": false,
       "date_text": "September 5 - 6, 2026",
@@ -322,7 +284,6 @@
       "category": "music"
     },
     {
-      "id": "106322",
       "name": "Acoustic music in Eastern WA",
       "is_free": true,
       "date_text": "September 5 - 6, 2026",
@@ -333,7 +294,6 @@
       "category": "music"
     },
     {
-      "id": "100085",
       "name": "Blackberry festival",
       "is_free": true,
       "date_text": "September 5 - 7, 2026",
@@ -344,7 +304,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "120403",
       "name": "Interactive show",
       "is_free": false,
       "date_text": "September 5 - 26, 2026 (Fri. & Sat.)",
@@ -355,7 +314,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "119702",
       "name": "Architectural tour",
       "is_free": false,
       "date_text": "September 5 - 26, 2026 (10 a.m. to 12 p.m.)",
@@ -366,7 +324,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "118561",
       "name": "Ride a mini train",
       "is_free": true,
       "date_text": "September 5 - Oct. 31, 2026 (10 a.m. to 4 p.m.)",
@@ -377,7 +334,6 @@
       "category": "other"
     },
     {
-      "id": "118512",
       "name": "Soccer",
       "is_free": false,
       "date_text": "September 5, 2026 - April 16, 2027",
@@ -388,7 +344,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "119411",
       "name": "Play video games",
       "is_free": true,
       "date_text": "September 6, 2026 (12 to 9 p.m.)",
@@ -399,7 +354,6 @@
       "category": "other"
     },
     {
-      "id": "118468",
       "name": "Car show",
       "is_free": true,
       "date_text": "September 6, 2026 (11 a.m. to 5 p.m.)",
@@ -410,7 +364,6 @@
       "category": "auto, boat, RV show"
     },
     {
-      "id": "119604",
       "name": "Music by candlelight",
       "is_free": false,
       "date_text": "September 6 - 27, 2026",
@@ -421,7 +374,6 @@
       "category": "music"
     },
     {
-      "id": "119759",
       "name": "Soccer",
       "is_free": false,
       "date_text": "September 6 - Nov. 1, 2026",
@@ -432,7 +384,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "106975",
       "name": "Huskies football",
       "is_free": false,
       "date_text": "September 6 - Nov. 21, 2026",
@@ -443,7 +394,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "119989",
       "name": "Ride a mini train",
       "is_free": true,
       "date_text": "September 7, 2026 (10 a.m. to 4 p.m.)",
@@ -454,7 +404,6 @@
       "category": "other"
     },
     {
-      "id": "120216",
       "name": "Baseball in Tacoma",
       "is_free": false,
       "date_text": "September 8 - 13, 2026",
@@ -465,7 +414,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "120440",
       "name": "Architecture party",
       "is_free": false,
       "date_text": "September 9, 2026 (4:30 to 8 p.m.)",
@@ -476,7 +424,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "118515",
       "name": "Football",
       "is_free": false,
       "date_text": "September 9 - Dec. 25, 2026",
@@ -487,7 +434,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "119375",
       "name": "Aquarium party",
       "is_free": false,
       "date_text": "September 10, 2026 (5:30 to 8:30 p.m)",
@@ -498,18 +444,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "118494",
-      "name": "Live better with less",
-      "is_free": false,
-      "date_text": "September 11, 2026 (7:30 p.m.)",
-      "neighborhood": "Downtown",
-      "distance_from_downtown": "0.3 miles S",
-      "address": "The Triple Door, 216 Union St, Seattle, WA 98101",
-      "source_url": "https://www.stgpresents.org/events/the-minimalists-present-how-to-let-go/",
-      "category": "other"
-    },
-    {
-      "id": "112869",
       "name": "Concerts at Marymoor Park",
       "is_free": false,
       "date_text": "September 11, 2026",
@@ -520,7 +454,6 @@
       "category": "music"
     },
     {
-      "id": "101179",
       "name": "Cider tasting",
       "is_free": false,
       "date_text": "September 11 - 12, 2026",
@@ -531,7 +464,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "116884",
       "name": "Oktoberfest in Edmonds",
       "is_free": true,
       "date_text": "September 11 - 12, 2026",
@@ -542,7 +474,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "100348",
       "name": "Lighthouse festival",
       "is_free": true,
       "date_text": "September 11 - 13, 2026",
@@ -553,18 +484,16 @@
       "category": "festival, art fair"
     },
     {
-      "id": "100084",
       "name": "Wooden boat festival & craft fair",
       "is_free": false,
       "date_text": "September 11 - 13, 2026",
       "neighborhood": "Port Townsend",
       "distance_from_downtown": "57 miles NW via ferry",
       "address": "Northwest Maritime Center, 431 Water St, Port Townsend, WA 98368",
-      "source_url": "https://woodenboat.org",
+      "source_url": "https://woodenboat.org/tour-the-boats/",
       "category": "festival, art fair"
     },
     {
-      "id": "120077",
       "name": "Brewery Running Series",
       "is_free": false,
       "date_text": "September 12, 2026 (11 a.m.)",
@@ -575,7 +504,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "108791",
       "name": "Tour modern homes",
       "is_free": false,
       "date_text": "September 12, 2026 (10 a.m. to 4 p.m.)",
@@ -586,7 +514,6 @@
       "category": "other"
     },
     {
-      "id": "102359",
       "name": "Drawing day",
       "is_free": false,
       "date_text": "September 12, 2026 (10 a.m. to 4 p.m.)",
@@ -597,7 +524,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "112867",
       "name": "Underground art show",
       "is_free": false,
       "date_text": "September 12, 2026 (8 p.m.)",
@@ -608,7 +534,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "117384",
       "name": "Art open house",
       "is_free": true,
       "date_text": "September 12, 2026 (5 to 8 p.m.)",
@@ -619,7 +544,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "118978",
       "name": "Jazz on the sidewalks",
       "is_free": false,
       "date_text": "September 12, 2026",
@@ -630,7 +554,6 @@
       "category": "music"
     },
     {
-      "id": "120436",
       "name": "Muslim festival",
       "is_free": true,
       "date_text": "September 12, 2026 (5 to 11 p.m.)",
@@ -641,7 +564,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119729",
       "name": "Neighborhood street fair",
       "is_free": true,
       "date_text": "September 12, 2026 (11 a.m. to 5 p.m.)",
@@ -652,7 +574,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "104443",
       "name": "Magnolia wine walk",
       "is_free": false,
       "date_text": "September 12, 2026 (5:30 to 8:30 p.m.)",
@@ -663,7 +584,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "115485",
       "name": "Rainier Beer festival",
       "is_free": true,
       "date_text": "September 12, 2026 (4 to 10 p.m.)",
@@ -674,7 +594,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "118984",
       "name": "Ukrainian festival",
       "is_free": true,
       "date_text": "September 12, 2026",
@@ -685,7 +604,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119410",
       "name": "Dogs in the pool",
       "is_free": false,
       "date_text": "September 12, 2026 (10 a.m. to 3 p.m.)",
@@ -696,7 +614,6 @@
       "category": "other"
     },
     {
-      "id": "103661",
       "name": "Lantern festival",
       "is_free": true,
       "date_text": "September 12, 2026 (7 to 10:30 p.m.)",
@@ -707,7 +624,6 @@
       "category": "parade, lights"
     },
     {
-      "id": "120204",
       "name": "Dog day (north)",
       "is_free": true,
       "date_text": "September 12, 2026 (11 a.m. to 5 p.m.)",
@@ -718,7 +634,6 @@
       "category": "other"
     },
     {
-      "id": "119812",
       "name": "Salmon celebration",
       "is_free": true,
       "date_text": "September 12, 2026 (10 a.m. to 6 p.m.)",
@@ -729,7 +644,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "101803",
       "name": "Beer on a farm",
       "is_free": false,
       "date_text": "September 12, 2026 (12 to 6 p.m.)",
@@ -740,7 +654,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "118589",
       "name": "Wine tasting for horse lovers",
       "is_free": false,
       "date_text": "September 12, 2026 (5:30 to 10:30 p.m.)",
@@ -751,7 +664,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "114187",
       "name": "Tasting in Snohomish",
       "is_free": false,
       "date_text": "September 12, 2026 (4 to 8 p.m.)",
@@ -762,7 +674,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "119000",
       "name": "Pioneer fall festival",
       "is_free": false,
       "date_text": "September 12, 2026 (11 a.m. to 5 p.m.)",
@@ -773,7 +684,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119146",
       "name": "Dog day (south)",
       "is_free": false,
       "date_text": "September 12, 2026 (10 a.m. to 3 p.m.)",
@@ -784,7 +694,6 @@
       "category": "other"
     },
     {
-      "id": "119147",
       "name": "Touch-a-Truck",
       "is_free": true,
       "date_text": "September 12, 2026 (10 a.m. to 1 p.m.)",
@@ -795,18 +704,6 @@
       "category": "other"
     },
     {
-      "id": "118976",
-      "name": "Beer up north",
-      "is_free": false,
-      "date_text": "September 12, 2026 (2 to 7 p.m.)",
-      "neighborhood": "Mount Vernon",
-      "distance_from_downtown": "61 miles N",
-      "address": "W. Broadway & S. 1st Street, Mount Vernon, WA 98273",
-      "source_url": "https://www.skagitvalleychamber.com/brewfest-on-the-skagit-2/",
-      "category": "food, beverage"
-    },
-    {
-      "id": "100232",
       "name": "World Rhythm Festival",
       "is_free": true,
       "date_text": "September 12 - 13, 2026",
@@ -817,7 +714,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "100218",
       "name": "LEGO building convention",
       "is_free": false,
       "date_text": "September 12 - 13, 2026",
@@ -828,10 +724,9 @@
       "category": "conference, expo"
     },
     {
-      "id": "119417",
       "name": "Mexican show",
       "is_free": true,
-      "date_text": "September 13, 2026 (2 to 6 p.m.)",
+      "date_text": "September 13, 2026",
       "neighborhood": "First Hill",
       "distance_from_downtown": "0.5 miles SE",
       "address": "Town Hall Seattle, 1119 8th Ave, Seattle, WA 98101",
@@ -839,10 +734,9 @@
       "category": "music"
     },
     {
-      "id": "100315",
       "name": "Hawaiian festival",
       "is_free": true,
-      "date_text": "September 13, 2026",
+      "date_text": "September 13, 2026 (11 a.m. to 6 p.m.)",
       "neighborhood": "Lower Queen Anne",
       "distance_from_downtown": "0.8 miles NW",
       "address": "Seattle Center, 305 Harrison St, Seattle, WA 98109",
@@ -850,7 +744,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "103578",
       "name": "Adventure race",
       "is_free": false,
       "date_text": "September 13, 2026 (9:30 to 11:30 a.m.)",
@@ -861,7 +754,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "120143",
       "name": "Floating lanterns, south of Tacoma",
       "is_free": false,
       "date_text": "September 13, 2026 (4:30 to 8:30 p.m.)",
@@ -872,7 +764,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "113088",
       "name": "Downhill marathon",
       "is_free": false,
       "date_text": "September 13, 2026",
@@ -883,7 +774,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "119005",
       "name": "Quilt art party",
       "is_free": true,
       "date_text": "September 15, 2026 (6 to 8 p.m.)",
@@ -894,7 +784,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "102888",
       "name": "Nordic film festival",
       "is_free": false,
       "date_text": "September 15 - 19, 2026",
@@ -905,7 +794,6 @@
       "category": "film"
     },
     {
-      "id": "106937",
       "name": "Gypsy jazz festival",
       "is_free": false,
       "date_text": "September 15 - 20, 2026",
@@ -916,7 +804,6 @@
       "category": "music"
     },
     {
-      "id": "120367",
       "name": "A Chorus Line",
       "is_free": false,
       "date_text": "September 15 - 27, 2026",
@@ -927,7 +814,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "120364",
       "name": "All-American musical",
       "is_free": false,
       "date_text": "September 15 - Oct. 18, 2026",
@@ -938,7 +824,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "115571",
       "name": "Film-festival party",
       "is_free": false,
       "date_text": "September 17, 2026",
@@ -949,7 +834,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "106775",
       "name": "Tasting party",
       "is_free": false,
       "date_text": "September 17, 2026 (5 to 8 p.m.)",
@@ -960,7 +844,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "115149",
       "name": "Eastside wine tasting",
       "is_free": false,
       "date_text": "September 17, 2026 (5:30 p.m., VIP 4 p.m.)",
@@ -971,7 +854,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "118583",
       "name": "Women who motivate",
       "is_free": false,
       "date_text": "September 17, 2026",
@@ -982,7 +864,6 @@
       "category": "conference, expo"
     },
     {
-      "id": "119901",
       "name": "Tacoma museum night",
       "is_free": true,
       "date_text": "September 17, 2026",
@@ -993,7 +874,6 @@
       "category": "other"
     },
     {
-      "id": "102687",
       "name": "National park day",
       "is_free": true,
       "date_text": "September 17, 2026",
@@ -1004,7 +884,6 @@
       "category": "other"
     },
     {
-      "id": "106154",
       "name": "Boat sale",
       "is_free": false,
       "date_text": "September 17 - 20, 2026",
@@ -1015,7 +894,6 @@
       "category": "auto, boat, RV show"
     },
     {
-      "id": "118513",
       "name": "Basketball",
       "is_free": false,
       "date_text": "September 17 & 23, 2026",
@@ -1026,7 +904,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "115320",
       "name": "Wine in West Seattle",
       "is_free": false,
       "date_text": "September 18, 2026 (5 to 9 p.m.)",
@@ -1037,7 +914,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "118963",
       "name": "Kirkland Fashion Show",
       "is_free": false,
       "date_text": "September 18, 2026 (3 to 5 p.m.)",
@@ -1048,7 +924,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "115404",
       "name": "Wine train",
       "is_free": false,
       "date_text": "September 18, 2026",
@@ -1059,7 +934,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "115425",
       "name": "Family Oktoberfest",
       "is_free": true,
       "date_text": "September 18 - 19, 2026",
@@ -1070,7 +944,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "100152",
       "name": "Oktoberfest in Fremont",
       "is_free": false,
       "date_text": "September 18 - 20, 2026",
@@ -1081,7 +954,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "119403",
       "name": "Fantasy festival near Portland",
       "is_free": false,
       "date_text": "September 18 - 20, 2026",
@@ -1092,7 +964,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "103544",
       "name": "Local film festival",
       "is_free": false,
       "date_text": "September 18 - 27, 2026",
@@ -1103,7 +974,6 @@
       "category": "film"
     },
     {
-      "id": "120214",
       "name": "Art downtown",
       "is_free": true,
       "date_text": "September 19, 2026 (11 a.m. to 7:30 p.m.)",
@@ -1114,7 +984,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119441",
       "name": "Salmon celebration",
       "is_free": true,
       "date_text": "September 19, 2026 (10 a.m. to 8 p.m.)",
@@ -1125,7 +994,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "118745",
       "name": "Monster trucks",
       "is_free": false,
       "date_text": "September 19, 2026 (5 p.m.)",
@@ -1136,7 +1004,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "120065",
       "name": "Night market",
       "is_free": true,
       "date_text": "September 19, 2026 (6 to 10 p.m.)",
@@ -1147,7 +1014,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "103622",
       "name": "Lantern parade",
       "is_free": true,
       "date_text": "September 19, 2026",
@@ -1158,7 +1024,6 @@
       "category": "parade, lights"
     },
     {
-      "id": "118628",
       "name": "Urban farm festival",
       "is_free": true,
       "date_text": "September 19, 2026 (10 a.m. to 3 p.m.)",
@@ -1169,7 +1034,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "120198",
       "name": "Bellevue night market",
       "is_free": false,
       "date_text": "September 19, 2026 (4 to 10 p.m.)",
@@ -1180,7 +1044,6 @@
       "category": "other"
     },
     {
-      "id": "119416",
       "name": "Eastside festival",
       "is_free": true,
       "date_text": "September 19, 2026 (10 a.m. to 7 p.m.)",
@@ -1191,7 +1054,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "120385",
       "name": "Craft market",
       "is_free": false,
       "date_text": "September 19, 2026 (10 a.m. to 4 p.m.)",
@@ -1202,7 +1064,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "120229",
       "name": "International festival",
       "is_free": true,
       "date_text": "September 19, 2026",
@@ -1213,7 +1074,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119385",
       "name": "Tacoma wine walk",
       "is_free": false,
       "date_text": "September 19, 2026 (1 to 4 p.m.)",
@@ -1224,7 +1084,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "118470",
       "name": "Eastern Washington salmon festival",
       "is_free": true,
       "date_text": "September 19, 2026",
@@ -1235,7 +1094,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "106770",
       "name": "Latin festival",
       "is_free": true,
       "date_text": "September 19 - 20, 2026",
@@ -1246,7 +1104,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "109054",
       "name": "Edmonds art tour",
       "is_free": true,
       "date_text": "September 19 - 20, 2026 (10 a.m. to 5 p.m.)",
@@ -1257,7 +1114,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "118530",
       "name": "Obstacle race",
       "is_free": false,
       "date_text": "September 19 - 20, 2026",
@@ -1268,7 +1124,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "119406",
       "name": "Korean festival",
       "is_free": true,
       "date_text": "September 19 & 26, 2026 (11 a.m. to 4 p.m.)",
@@ -1279,7 +1134,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "120097",
       "name": "Tacoma concerts",
       "is_free": false,
       "date_text": "September 19 - Oct. 9, 2026",
@@ -1290,7 +1144,6 @@
       "category": "music"
     },
     {
-      "id": "120435",
       "name": "Drama by Shakespeare",
       "is_free": false,
       "date_text": "September 19 - Oct. 11, 2026",
@@ -1301,7 +1154,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "118516",
       "name": "Hockey",
       "is_free": false,
       "date_text": "September 19, 2026 - April 3, 2027",
@@ -1312,7 +1164,6 @@
       "category": "spectator sport"
     },
     {
-      "id": "119822",
       "name": "Annual garage sale",
       "is_free": true,
       "date_text": "September 20, 2026 (10 a.m. to 2 p.m.)",
@@ -1323,7 +1174,6 @@
       "category": "other"
     },
     {
-      "id": "118613",
       "name": "Small-town apple festival",
       "is_free": true,
       "date_text": "September 20, 2026 (10 a.m. to 5 p.m.)",
@@ -1334,7 +1184,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119401",
       "name": "Taste of West Seattle",
       "is_free": false,
       "date_text": "September 24, 2026 (6 p.m., VIP 5:30)",
@@ -1345,7 +1194,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "110873",
       "name": "Glass pumpkin party",
       "is_free": false,
       "date_text": "September 24, 2026 (5 to 8 p.m.)",
@@ -1356,7 +1204,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "100153",
       "name": "Sketch comedy festival",
       "is_free": false,
       "date_text": "September 24 - 27, 2026",
@@ -1367,7 +1214,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "118472",
       "name": "Film festival",
       "is_free": false,
       "date_text": "September 24 - 27, 2026",
@@ -1378,7 +1224,6 @@
       "category": "film"
     },
     {
-      "id": "120037",
       "name": "Port Townsend Film Festival",
       "is_free": false,
       "date_text": "September 24 - 27, 2026",
@@ -1389,7 +1234,6 @@
       "category": "film"
     },
     {
-      "id": "120429",
       "name": "Party in the market",
       "is_free": true,
       "date_text": "September 25, 2026 (3 to 9 p.m.)",
@@ -1400,7 +1244,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "120434",
       "name": "Beer tasting",
       "is_free": false,
       "date_text": "September 25, 2026 (1 to 5 p.m.)",
@@ -1411,7 +1254,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "119764",
       "name": "Concerts on a farm",
       "is_free": false,
       "date_text": "September 25, 2026",
@@ -1422,7 +1264,6 @@
       "category": "music"
     },
     {
-      "id": "119446",
       "name": "Haunted dinner party",
       "is_free": false,
       "date_text": "September 25, 2026 (7 p.m.)",
@@ -1433,7 +1274,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "119111",
       "name": "Hot-air balloons in Tri Cities",
       "is_free": true,
       "date_text": "September 25 - 27, 2026",
@@ -1444,7 +1284,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "101800",
       "name": "Seattle haunted house",
       "is_free": false,
       "date_text": "September 25 - Nov. 7, 2026",
@@ -1455,7 +1294,6 @@
       "category": "other"
     },
     {
-      "id": "102208",
       "name": "Asian night festival",
       "is_free": true,
       "date_text": "September 26, 2026",
@@ -1466,7 +1304,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "101248",
       "name": "Ecology festival",
       "is_free": true,
       "date_text": "September 26, 2026 (11 a.m. to 4 p.m.)",
@@ -1477,7 +1314,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "106562",
       "name": "Bellevue fashion show",
       "is_free": false,
       "date_text": "September 26, 2026 (6 to 9:30 p.m.)",
@@ -1488,7 +1324,6 @@
       "category": "play, musical, show"
     },
     {
-      "id": "120387",
       "name": "North-end Oktoberfest",
       "is_free": false,
       "date_text": "September 26, 2026 (6 p.m., VIP 5 p.m.)",
@@ -1499,7 +1334,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "119380",
       "name": "Ecology fair",
       "is_free": true,
       "date_text": "September 26, 2026 (10 a.m. to 2 p.m.)",
@@ -1510,7 +1344,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "106779",
       "name": "Cider festival",
       "is_free": false,
       "date_text": "September 26, 2026 (12 to 5 p.m.)",
@@ -1521,7 +1354,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "120221",
       "name": "Tacoma art party",
       "is_free": false,
       "date_text": "September 26, 2026 (8 to 11 p.m.)",
@@ -1532,7 +1364,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "106995",
       "name": "State park day",
       "is_free": true,
       "date_text": "September 26, 2026",
@@ -1543,7 +1374,6 @@
       "category": "other"
     },
     {
-      "id": "100079",
       "name": "Italian festival",
       "is_free": true,
       "date_text": "September 26 - 27, 2026",
@@ -1554,7 +1384,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "100316",
       "name": "Tea festival",
       "is_free": false,
       "date_text": "September 26 - 27, 2026",
@@ -1565,7 +1394,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "120170",
       "name": "Tour art studios",
       "is_free": true,
       "date_text": "September 26 - 27, 2026 (10 a.m. to 6 p.m.)",
@@ -1576,7 +1404,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "119801",
       "name": "Beer & BBQ festival",
       "is_free": false,
       "date_text": "September 26 - 27, 2026 (11 a.m. to 5 p.m.)",
@@ -1587,7 +1414,6 @@
       "category": "food, beverage"
     },
     {
-      "id": "119110",
       "name": "Bellingham festival",
       "is_free": true,
       "date_text": "September 26 - 27, 2026",
@@ -1598,7 +1424,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "101806",
       "name": "Halloween at Wild Waves",
       "is_free": false,
       "date_text": "September 26 - Nov. 1, 2026",
@@ -1609,7 +1434,6 @@
       "category": "other"
     },
     {
-      "id": "118457",
       "name": "Wine fun run",
       "is_free": false,
       "date_text": "September 27, 2026",
@@ -1620,7 +1444,6 @@
       "category": "run/walk, bike, swim"
     },
     {
-      "id": "118999",
       "name": "Bonsai party",
       "is_free": false,
       "date_text": "September 27, 2026 (1 to 4 p.m.)",
@@ -1631,7 +1454,6 @@
       "category": "party, bar events"
     },
     {
-      "id": "120227",
       "name": "Senior citizen festival",
       "is_free": true,
       "date_text": "September 29, 2026",
@@ -1642,7 +1464,6 @@
       "category": "festival, art fair"
     },
     {
-      "id": "120220",
       "name": "Charity tasting",
       "is_free": false,
       "date_text": "September 30, 2026 (5:30 to 9 p.m.)",

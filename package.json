@@ -1,5 +1,5 @@
 {
-  "name": "seattle-things-to-do",
+  "name": "hedgie",
   "private": true,
   "type": "module",
   "version": "1.0.0",
@@ -7,8 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "scrape": "node scripts/scrape.js",
-    "describe": "node scripts/generate-descriptions.js"
+    "scrape:events": "node scripts/scrape-events.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0"

@@ -1,17 +1,21 @@
 // Scrapes FACTS ONLY about upcoming Seattle events from events12.com/seattle/.
-// We never store their written description text (copyright) — only structured
-// facts (name, date, location, category, and links), per the site's own
-// robots.txt (which allows crawling this page).
+// We never store the site's written description text (copyright) — only
+// structured facts (name, date, location, category, and the event's own
+// link), per the site's own robots.txt (which allows crawling this page).
+//
+// This does NOT call Gemini. Description generation is a separate step,
+// added once GEMINI_API_KEY is wired up.
 import { writeFile, mkdir } from "node:fs/promises";
 import * as cheerio from "cheerio";
 
 // events12.com's /seattle/ base URL always renders whatever the current
 // calendar month is (verified: fetching it on the 1st of a month already
 // shows that month's events), so there's no need to hardcode a dated path
-// or chase the "next month" link — this one URL stays "current" forever.
+// or chase the page's "next month" link — this one URL stays "current"
+// forever, with zero hardcoded month names.
 const SOURCE_URL = "https://www.events12.com/seattle/";
 
-const USER_AGENT = "SeattleThingsToDoBot/1.0 (+personal hobby project, monthly run)";
+const USER_AGENT = "HedgieBot/1.0 (+personal hobby project, monthly run)";
 
 // The site's own category taxonomy, from its filter checkboxes (e.g. class
 // "q7" on an <article> means the "music" filter applies to it). q20/q21/q22
@@ -78,7 +82,7 @@ function extractEvent($, article) {
   const address = parseAddressFromMapLink(mapHref);
 
   // Content links (the event's own site) never carry a class attribute;
-  // map/tickets/photos/video buttons always do (b1/b2/b3/b5/b4).
+  // map/tickets/photos/video buttons always do (b1/b2/b3/b4/b5).
   const $sourceLink = $article
     .find("a")
     .filter((_, el) => !$(el).attr("class"))
@@ -86,10 +90,8 @@ function extractEvent($, article) {
   const source_url = $sourceLink.attr("href") || null;
 
   const category = categoryFromClassList($article.attr("class"));
-  const id = $article.attr("id") || null;
 
   return {
-    id,
     name,
     is_free: isFree,
     date_text: dateText,
@@ -109,24 +111,35 @@ async function scrape() {
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  const events = [];
+  const items = [];
   $("article").each((_, article) => {
     const event = extractEvent($, article);
-    if (event && event.name) events.push(event);
+    if (event && event.name) items.push(event);
   });
 
-  await mkdir(new URL("../data/", import.meta.url), { recursive: true });
   const outPath = new URL("../data/events.json", import.meta.url);
+  const status = items.length > 0 ? "ok" : "error";
+
+  await mkdir(new URL("../data/", import.meta.url), { recursive: true });
   await writeFile(
     outPath,
     JSON.stringify(
-      { source_url: SOURCE_URL, scraped_at: new Date().toISOString(), events },
+      {
+        generated_at: new Date().toISOString(),
+        source: `Facts scraped from ${SOURCE_URL}; descriptions not yet Gemini-generated`,
+        status,
+        items,
+      },
       null,
       2
     ) + "\n"
   );
 
-  console.log(`Scraped ${events.length} events from ${SOURCE_URL}`);
+  console.log(`Scraped ${items.length} events from ${SOURCE_URL}`);
+
+  if (items.length === 0) {
+    throw new Error("Scraped 0 events — treating as a failure so CI surfaces it");
+  }
 }
 
 scrape().catch((err) => {
