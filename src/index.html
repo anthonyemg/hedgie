@@ -74,7 +74,11 @@
     <select id="category-filter">
       <option value="">All categories</option>
     </select>
-    <label><input type="checkbox" id="today-filter"> Today only</label>
+    <select id="date-filter">
+      <option value="">All dates</option>
+      <option value="today">Today</option>
+      <option value="week">This week</option>
+    </select>
   </div>
   <ul id="events"></ul>
 
@@ -150,13 +154,15 @@ function parseDateInfo(dateText) {
   };
 }
 
-function isEventToday(dateText, today) {
+// True if the event has any day in common with [windowStart, windowEnd]
+// (inclusive). Used for both "Today" (a single-day window) and "This week".
+function isEventInWindow(dateText, windowStart, windowEnd) {
   const info = parseDateInfo(dateText);
   if (!info) return false;
   if (info.type === "discrete") {
-    return info.dates.some((d) => d.getTime() === today.getTime());
+    return info.dates.some((d) => d >= windowStart && d <= windowEnd);
   }
-  return today >= info.start && today <= info.end;
+  return info.start <= windowEnd && info.end >= windowStart;
 }
 
 async function main() {
@@ -165,9 +171,13 @@ async function main() {
   const meta = document.getElementById('meta');
   const list = document.getElementById('events');
   const filter = document.getElementById('category-filter');
-  const todayFilter = document.getElementById('today-filter');
+  const dateFilter = document.getElementById('date-filter');
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  // "This week" = today through the coming Saturday (weeks run Sun–Sat),
+  // i.e. the rest of the current calendar week, not days already past.
+  const endOfWeek = new Date(today);
+  endOfWeek.setDate(today.getDate() + (6 - today.getDay()));
 
   meta.textContent = `${data.items.length} events · updated ${new Date(data.generated_at).toLocaleDateString()}`;
 
@@ -219,14 +229,18 @@ async function main() {
   function applyFilters() {
     let events = data.items;
     if (filter.value) events = events.filter(e => e.category === filter.value);
-    if (todayFilter.checked) events = events.filter(e => isEventToday(e.date_text, today));
+    if (dateFilter.value === 'today') {
+      events = events.filter(e => isEventInWindow(e.date_text, today, today));
+    } else if (dateFilter.value === 'week') {
+      events = events.filter(e => isEventInWindow(e.date_text, today, endOfWeek));
+    }
     render(events);
   }
 
   applyFilters();
 
   filter.addEventListener('change', applyFilters);
-  todayFilter.addEventListener('change', applyFilters);
+  dateFilter.addEventListener('change', applyFilters);
 }
 
 main().catch(err => {
