@@ -129,10 +129,30 @@
   #forecast .day .lo {
     color: #777;
   }
+  #mood-label {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  #mood-label.loaded {
+    display: block;
+  }
+  #mood-label.outdoor {
+    background: #fff3cd;
+    color: #7a5c00;
+  }
+  #mood-label.indoor {
+    background: #e3edf7;
+    color: #2c5282;
+  }
 </style>
 </head>
 <body>
   <h1>Hedgie</h1>
+  <div id="mood-label"></div>
   <div id="weather">
     <span class="icon"></span>
     <div>
@@ -271,6 +291,14 @@ async function loadWeather() {
       `High ${Math.round(today.high_f)}° · Low ${Math.round(today.low_f)}° · ` +
       `${today.precipitation_probability_max}% chance of rain`;
     weatherEl.classList.add('loaded');
+
+    const RAINY_ICONS = ['🌧️', '🌦️', '🌨️', '⛈️'];
+    const TOO_COLD_F = 55;
+    const isOutdoorWeather = !RAINY_ICONS.includes(today.icon) && today.high_f >= TOO_COLD_F;
+
+    const moodEl = document.getElementById('mood-label');
+    moodEl.textContent = isOutdoorWeather ? 'Outdoor play day! ☀️' : "Let's play inside! 🏠";
+    moodEl.classList.add('loaded', isOutdoorWeather ? 'outdoor' : 'indoor');
 
     const forecastEl = document.getElementById('forecast');
     forecastEl.innerHTML = '';
