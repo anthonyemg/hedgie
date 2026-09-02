@@ -51,28 +51,125 @@
   .description {
     margin: 0.3rem 0 0;
   }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
   select {
     font-size: 1rem;
     padding: 0.3rem;
-    margin-bottom: 1rem;
+  }
+  .controls label {
+    font-size: 0.95rem;
   }
 </style>
 </head>
 <body>
   <h1>Seattle Things To Do</h1>
   <div id="meta">Loading&hellip;</div>
-  <select id="category-filter">
-    <option value="">All categories</option>
-  </select>
+  <div class="controls">
+    <select id="category-filter">
+      <option value="">All categories</option>
+    </select>
+    <label><input type="checkbox" id="today-filter"> Today only</label>
+  </div>
   <ul id="events"></ul>
 
 <script>
+// date_text is a free-text string like "September 1, 2026",
+// "September 2 - Oct. 3, 2026", or "September 17 & 23, 2026" (discrete
+// dates, not a range) — parsed just well enough to answer "is this event
+// happening today?" for the today-only filter. Trailing time-of-day notes
+// like "(8 p.m.)" are stripped before parsing.
+const MONTHS = {
+  jan: 0, january: 0, feb: 1, february: 1, mar: 2, march: 2,
+  apr: 3, april: 3, may: 4, jun: 5, june: 5, jul: 6, july: 6,
+  aug: 7, august: 7, sep: 8, sept: 8, september: 8,
+  oct: 9, october: 9, nov: 10, november: 10, dec: 11, december: 11,
+};
+
+function parseMonth(token) {
+  const key = token.toLowerCase().replace(/\./g, '');
+  return Object.prototype.hasOwnProperty.call(MONTHS, key) ? MONTHS[key] : null;
+}
+
+function parseDatePart(text) {
+  let match = text.match(/^([A-Za-z.]+)\s+(\d{1,2})(?:,\s*(\d{4}))?$/);
+  if (match) {
+    const month = parseMonth(match[1]);
+    if (month === null) return null;
+    return { month, day: parseInt(match[2], 10), year: match[3] ? parseInt(match[3], 10) : null };
+  }
+  match = text.match(/^(\d{1,2})(?:,\s*(\d{4}))?$/);
+  if (match) return { month: null, day: parseInt(match[1], 10), year: match[2] ? parseInt(match[2], 10) : null };
+  return null;
+}
+
+// Fills in missing month/year on each part by borrowing from a neighbor
+// (used for "17 & 23, 2026" style discrete-date lists).
+function resolveParts(parts) {
+  for (let pass = 0; pass < 2; pass++) {
+    for (let i = 0; i < parts.length; i++) {
+      const donor = parts[i + 1] || parts[i - 1];
+      if (!donor) continue;
+      if (parts[i].month === null) parts[i].month = donor.month;
+      if (parts[i].year === null) parts[i].year = donor.year;
+    }
+  }
+  return parts.every((p) => p.month !== null && p.year !== null) ? parts : null;
+}
+
+function parseDateInfo(dateText) {
+  if (!dateText) return null;
+  const cleaned = dateText.replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
+
+  if (cleaned.includes("&")) {
+    const parts = cleaned.split(/\s*&\s*/).map(parseDatePart);
+    if (parts.some((p) => !p)) return null;
+    const resolved = resolveParts(parts);
+    if (!resolved) return null;
+    return { type: "discrete", dates: resolved.map((p) => new Date(p.year, p.month, p.day)) };
+  }
+
+  const parts = cleaned.split(/\s*-\s*/).map(parseDatePart);
+  if (parts.some((p) => !p)) return null;
+  let [start, end] = parts.length === 1 ? [parts[0], parts[0]] : parts;
+
+  if (start.month === null) start.month = end.month;
+  if (end.month === null) end.month = start.month;
+  if (start.month === null || end.month === null) return null;
+  if (start.year === null && end.year !== null) start.year = start.month > end.month ? end.year - 1 : end.year;
+  if (end.year === null && start.year !== null) end.year = end.month < start.month ? start.year + 1 : start.year;
+  if (start.year === null || end.year === null) return null;
+
+  return {
+    type: "range",
+    start: new Date(start.year, start.month, start.day),
+    end: new Date(end.year, end.month, end.day),
+  };
+}
+
+function isEventToday(dateText, today) {
+  const info = parseDateInfo(dateText);
+  if (!info) return false;
+  if (info.type === "discrete") {
+    return info.dates.some((d) => d.getTime() === today.getTime());
+  }
+  return today >= info.start && today <= info.end;
+}
+
 async function main() {
   const res = await fetch('data/events.json');
   const data = await res.json();
   const meta = document.getElementById('meta');
   const list = document.getElementById('events');
   const filter = document.getElementById('category-filter');
+  const todayFilter = document.getElementById('today-filter');
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   meta.textContent = `${data.events.length} events · updated ${new Date(data.scraped_at).toLocaleDateString()}`;
 
@@ -121,12 +218,17 @@ async function main() {
     }
   }
 
-  render(data.events);
+  function applyFilters() {
+    let events = data.events;
+    if (filter.value) events = events.filter(e => e.category === filter.value);
+    if (todayFilter.checked) events = events.filter(e => isEventToday(e.date_text, today));
+    render(events);
+  }
 
-  filter.addEventListener('change', () => {
-    const value = filter.value;
-    render(value ? data.events.filter(e => e.category === value) : data.events);
-  });
+  applyFilters();
+
+  filter.addEventListener('change', applyFilters);
+  todayFilter.addEventListener('change', applyFilters);
 }
 
 main().catch(err => {
