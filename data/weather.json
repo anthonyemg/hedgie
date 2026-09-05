@@ -1,37 +1,26 @@
 {
-  "generated_at": "2026-09-04T17:20:26.417Z",
+  "generated_at": "2026-09-05T16:29:37.653Z",
   "source": "Open-Meteo forecast for Seattle, WA (47.6062, -122.3321)",
   "status": "ok",
   "items": [
     {
-      "date": "2026-09-04",
-      "temp_f": 57.7,
-      "condition": "Overcast",
-      "icon": "☁️",
-      "high_f": 65.7,
-      "low_f": 51.7,
-      "precipitation_probability_max": 12,
-      "aqi": 54,
-      "aqi_category": "Moderate"
-    },
-    {
       "date": "2026-09-05",
-      "temp_f": null,
-      "condition": "Overcast",
-      "icon": "☁️",
-      "high_f": 63.9,
-      "low_f": 51.2,
-      "precipitation_probability_max": 13,
-      "aqi": null,
-      "aqi_category": null
+      "temp_f": 57,
+      "condition": "Slight rain",
+      "icon": "🌧️",
+      "high_f": 68.4,
+      "low_f": 51.4,
+      "precipitation_probability_max": 9,
+      "aqi": 58,
+      "aqi_category": "Moderate"
     },
     {
       "date": "2026-09-06",
       "temp_f": null,
       "condition": "Overcast",
       "icon": "☁️",
-      "high_f": 73,
-      "low_f": 51.5,
+      "high_f": 71.7,
+      "low_f": 51.8,
       "precipitation_probability_max": 2,
       "aqi": null,
       "aqi_category": null
@@ -41,9 +30,9 @@
       "temp_f": null,
       "condition": "Overcast",
       "icon": "☁️",
-      "high_f": 73,
-      "low_f": 52.6,
-      "precipitation_probability_max": 3,
+      "high_f": 67.6,
+      "low_f": 52.1,
+      "precipitation_probability_max": 5,
       "aqi": null,
       "aqi_category": null
     },
@@ -52,8 +41,8 @@
       "temp_f": null,
       "condition": "Overcast",
       "icon": "☁️",
-      "high_f": 71.2,
-      "low_f": 53.2,
+      "high_f": 72.1,
+      "low_f": 51.5,
       "precipitation_probability_max": 0,
       "aqi": null,
       "aqi_category": null
@@ -63,8 +52,8 @@
       "temp_f": null,
       "condition": "Overcast",
       "icon": "☁️",
-      "high_f": 79.1,
-      "low_f": 54.6,
+      "high_f": 76,
+      "low_f": 52.4,
       "precipitation_probability_max": 1,
       "aqi": null,
       "aqi_category": null
@@ -72,11 +61,22 @@
     {
       "date": "2026-09-10",
       "temp_f": null,
-      "condition": "Clear sky",
-      "icon": "☀️",
-      "high_f": 82.9,
-      "low_f": 57.3,
-      "precipitation_probability_max": 13,
+      "condition": "Overcast",
+      "icon": "☁️",
+      "high_f": 77.5,
+      "low_f": 54.9,
+      "precipitation_probability_max": 5,
+      "aqi": null,
+      "aqi_category": null
+    },
+    {
+      "date": "2026-09-11",
+      "temp_f": null,
+      "condition": "Light drizzle",
+      "icon": "🌦️",
+      "high_f": 69,
+      "low_f": 53.3,
+      "precipitation_probability_max": 16,
       "aqi": null,
       "aqi_category": null
     }
